@@ -7,7 +7,7 @@ node = Node("talker")
 
 def cb(request, response):
     if request.name == "岡湧育":
-        response.age = 20
+        response.age = 70
     else:
         response.age = 255
 
