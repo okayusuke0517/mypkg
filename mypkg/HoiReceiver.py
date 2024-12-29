@@ -15,7 +15,7 @@ class HoiReceiver(Node):
         self.get_logger().info(f"Received Count: {msg.data} あっち向いてホイ")
 
     def cb_direction(self, msg):
-        self.get_logger().info(f"Received Direction: {msg.data}")
+        self.get_logger().info(f"Received Direction and today's day: {msg.data}")
 
 def main():
     rclpy.init()

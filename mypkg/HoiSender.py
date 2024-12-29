@@ -5,7 +5,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int16, String
 import random
-
+from datetime import datetime
 class HoiSender(Node):
     def __init__(self):
         super().__init__("HoiSender")
@@ -25,9 +25,12 @@ class HoiSender(Node):
             self.pub_count.publish(count_msg)
             self.n += 1
         else:
-            # ランダム方向メッセージを作成
+            # ランダム方向メッセージと今日の曜日を作成
             direction_msg = String()
-            direction_msg.data = random.choice(["上", "下", "左", "右"])
+            direction = random.choice(["上", "下", "左", "右"])
+            current_day = datetime.now().strftime('%A')
+            direction_msg.data = f"{direction} - {current_day}"
+
             self.pub_direction.publish(direction_msg)
 
         # 次は方向かカウントかを切り替える
