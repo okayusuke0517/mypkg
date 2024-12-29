@@ -10,5 +10,5 @@ timeout 15 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Received Count: 5 あっち向いてホイ'
-#cat /tmp/mypkg.log |
-#grep -E 'Received Direction: (上|下|左|右)'
+cat /tmp/mypkg.log |
+grep -E 'Received Direction: (上|下|左|右)'

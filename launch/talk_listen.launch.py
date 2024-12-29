@@ -20,7 +20,7 @@ def generate_launch_description():
 
     # LaunchDescription を返す
     return launch.LaunchDescription([
-        HoiSsender,
+        HoiSender,
         HoiReceiver,
     ])
 
