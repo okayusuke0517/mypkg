@@ -22,7 +22,7 @@ class AchiMuiteHoiPublisher(Node):
             status_msg = String()
             status_msg.data = message
             self.pub_game_status.publish(status_msg)
-            self.get_logger().info(f"Published: {message}")
+           # self.get_logger().info(f"Published: {message}")
             self.n += 1
 
 def main():

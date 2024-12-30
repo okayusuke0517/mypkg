@@ -8,11 +8,12 @@ def generate_launch_description():
     AchiMuiteHoiPublisher = launch_ros.actions.Node(
         package='mypkg',       # パッケージ名
         executable='AchiMuiteHoiPublisher',   # 実行するノード
+        output='screen'
     )
 
     # LaunchDescription を返す
     return launch.LaunchDescription([
-        AchiMuiteHoiPublisher,
+        AchiMuiteHoiPublisher
     ])
 
 
