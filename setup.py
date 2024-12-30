@@ -23,8 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'HoiSender = mypkg.HoiSender:main',
-            'HoiReceiver = mypkg.HoiReceiver:main',
+            'AchiMuiteHoiPublisher = mypkg.AchiMuiteHoiPublisher:main',
         ],
     },
 )
