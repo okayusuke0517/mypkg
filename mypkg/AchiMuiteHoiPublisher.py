@@ -18,10 +18,11 @@ class AchiMuiteHoiPublisher(Node):
     def publish_status(self):
             direction = random.choice(["上", "下", "左", "右"])
             current_day = datetime.now().strftime('%A')
-            message = f"Round:{self.n} Direction:{direction} The day we are playing:{current_day}"            
+            message = f"Round: {self.n}, Direction: {direction}, The day we are playing: {current_day}"            
             status_msg = String()
             status_msg.data = message
             self.pub_game_status.publish(status_msg)
+            self.get_logger().info(f"Published: {message}")
             self.n += 1
 
 def main():

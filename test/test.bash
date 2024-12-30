@@ -7,10 +7,10 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-timeout 20 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
+timeout 10 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
-cat /tmp/mypkg.log | grep -E "Direction:(上|下|左|右)"
+cat /tmp/mypkg.log | grep -E "Direction: (上|下|左|右)"
 
-#cat /tmp/mypkg.log | grep 'Round:5'
+#cat /tmp/mypkg.log | grep 'Round: 5'
 
-#cat /tmp/mypkg.log | grep -E "The day we are playing:(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)"
+#cat /tmp/mypkg.log | grep -E "The day we are playing: (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)"
