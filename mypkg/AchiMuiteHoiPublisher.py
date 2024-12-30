@@ -12,7 +12,7 @@ class AchiMuiteHoiPublisher(Node):
         self.pub_game_status = self.create_publisher(String, "game_status", 10)
 
         # タイマーの間隔を１．０秒に設定
-        self.create_timer(1.0, self.publish_status)
+        self.create_timer(0.5, self.publish_status)
         self.n = 0
 
     def publish_status(self):
