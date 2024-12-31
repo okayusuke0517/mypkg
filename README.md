@@ -12,9 +12,9 @@ HoiStatusPublisherは、ROS2ノードで「あっち向いてホイ」のゲー�
 
 - **`/game_status`**（メッセージをパブリッシュするトピック）
   - **型**: `std_msgs/String`
-  - **説明**: ゲームのラウンド数、方向情報（上、下、左、右）、プレイ中の日付を含むメッセージをパブリッシュする。
+  - **説明**: ゲームのラウンド数、方向情報（上、下、左、右）、プレイ中の曜日を含むメッセージをパブリッシュする。
 
-## ダウンロードして移動
+## ダウンロード
 
 リポジトリをクローン
 ```bash
@@ -42,6 +42,7 @@ git clone https://github.com/okayusuke0517/mypkg.git
    data: 'Round: 15, Direction: 下, The day we are playing: Tuesday'
    ---
    data: 'Round: 16, Direction: 左, The day we are playing: Tuesday'
+   ---
    ```
 
 ## 必要なソフトウェア
@@ -52,13 +53,13 @@ git clone https://github.com/okayusuke0517/mypkg.git
 ## テスト環境
 
 - ROS2
-  - ディストリビューション:Humble Hawksbill
+  - Distribution:Humble Hawksbill
   - OS:Ubuntu 22.04 LTS
 
 ## ライセンス
 
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
-© 2024 Yusuke Oka* このパッケージのHoiStatusPublisher.py,test.bash以外のコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
+* このパッケージのHoiStatusPublisher.py,test.bash以外のコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
     - https://github.com/ryuichiueda/slides_marp/tree/master/robosys2024
 
 © 2024 Yusuke Oka
