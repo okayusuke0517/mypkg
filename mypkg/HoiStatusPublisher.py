@@ -6,9 +6,9 @@ from rclpy.node import Node
 from std_msgs.msg import String
 import random
 from datetime import datetime
-class AchiMuiteHoiPublisher(Node):
+class HoiStatusPublisher(Node):
     def __init__(self):
-        super().__init__("AchiMuiteHoiPublisher")
+        super().__init__("HoiStatusPublisher")
         self.pub_game_status = self.create_publisher(String, "game_status", 10)
 
         # タイマーの間隔を１．０秒に設定
@@ -27,7 +27,7 @@ class AchiMuiteHoiPublisher(Node):
 
 def main():
     rclpy.init()
-    node = AchiMuiteHoiPublisher()
+    node = HoiStatusPublisher()
     rclpy.spin(node)
 
 if __name__ == "__main__":
