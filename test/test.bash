@@ -13,4 +13,4 @@ cat /tmp/mypkg.log | grep -E "Direction: (上|下|左|右)"
 
 cat /tmp/mypkg.log | grep 'Round: 5'
 
-cat /tmp/mypkg.log | grep -E "The day we are playing: (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)"
+cat /tmp/mypkg.log | grep -E "The day and month we are playing on: (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (January|February|March|April|May|June|July|August|September|October|November|December)"

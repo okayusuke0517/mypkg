@@ -17,8 +17,9 @@ class HoiStatusPublisher(Node):
 
     def publish_status(self):
             direction = random.choice(["上", "下", "左", "右"])
-            current_day = datetime.now().strftime('%A')
-            message = f"Round: {self.n}, Direction: {direction}, The day we are playing: {current_day}"            
+            current_day = datetime.now().strftime('%A') # 曜日
+            current_month = datetime.now().strftime('%B')# 月
+            message = f"Round: {self.n}, Direction: {direction}, The day and month we are playing on: {current_day}, {current_month}"            
             status_msg = String()
             status_msg.data = message
             self.pub_game_status.publish(status_msg)

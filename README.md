@@ -12,11 +12,11 @@ HoiStatusPublisherは、ROS2ノードで「あっち向いてホイ」のゲー�
 
 - **`/game_status`**（メッセージをパブリッシュするトピック）
   - **型**: `std_msgs/String`
-  - **説明**: ゲームのラウンド数、方向情報（上、下、左、右）、プレイ中の曜日を含むメッセージをパブリッシュする。
+  - **説明**: ゲームのラウンド数、方向情報（上、下、左、右）、プレイ中の曜日と月を含むメッセージをパブリッシュする。
   - **メッセージの意味**:
     - `Round`: ゲームのラウンド番号（整数）
     - `Directin`: プレイヤーが選んだ方向（上、下、左、右）
-    - `The day we are playing`: ゲームがプレイされている曜日（例：Monday、Tuesdayなど）
+    - `The day and month we are playing on`: ゲームがプレイされている曜日と月（例：Monday、Januaryなど）
 
 
 ## ダウンロード
@@ -40,13 +40,13 @@ git clone https://github.com/okayusuke0517/mypkg.git
    ```bash
    $ros2 topic echo /game_status
 
-   data: 'Round: 13, Direction: 上, The day we are playing: Tuesday'
+   data: 'Round: 29, Direction: 下, The day and month we are playing on: Wednesday, January'
    ---
-   data: 'Round: 14, Direction: 上, The day we are playing: Tuesday'
+   data: 'Round: 30, Direction: 下, The day and month we are playing on: Wednesday, January'
    ---
-   data: 'Round: 15, Direction: 下, The day we are playing: Tuesday'
+   data: 'Round: 31, Direction: 下, The day and month we are playing on: Wednesday, January'
    ---
-   data: 'Round: 16, Direction: 左, The day we are playing: Tuesday'
+   data: 'Round: 32, Direction: 下, The day and month we are playing on: Wednesday, January'
    ---
    ```
 
