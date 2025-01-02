@@ -12,11 +12,11 @@ colcon build
 source $dir/.bashrc
 
 # ノードを直接起動
-timeout 20 ros2 run mypkg hoistatuspublisher > /tmp/mypkg.log &
+timeout 10 ros2 run mypkg hoistatuspublisher > /tmp/mypkg.log &
 
 ros2 topic echo /game_status > /tmp/game_status.log &
 
-sleep 5
+sleep 10
 
 cat /tmp/game_status.log | grep -E "Round: 5, Direction: (上|下|左|右), The day and month we are playing on: (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (January|February|March|April|May|June|July|August|September|October|November|December)"
 
