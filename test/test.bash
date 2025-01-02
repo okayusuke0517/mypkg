@@ -16,6 +16,8 @@ timeout 10 ros2 run mypkg hoistatuspublisher > /tmp/mypkg.log &
 
 ros2 topic echo /game_status > /tmp/game_status.log &
 
+sleep 5
+
 cat /tmp/game_status.log | grep -E "Direction: (上|下|左|右)"
 
 cat /tmp/game_status.log | grep 'Round: 5'
