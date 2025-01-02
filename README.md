@@ -1,11 +1,11 @@
-# HoiStatusPublisher
+# hoistatuspublisher
 ![test](https://github.com/okayusuke0517/mypkg/actions/workflows/test.yml/badge.svg)
 
-HoiStatusPublisherは、ROS2ノードで「あっち向いてホイ」のゲームステータスを１秒ごとにパブリッシュする。
+hoistatuspublisherは、ROS2ノードで「あっち向いてホイ」のゲームステータスを１秒ごとにパブリッシュする。
 
 ## ノード
 
-- **HoiStatusPublisher**
+- **hoistatuspublisher**
   - ゲームのステータスをトピックにパブリッシュするノード
 
 ## トピック一覧
@@ -19,7 +19,7 @@ HoiStatusPublisherは、ROS2ノードで「あっち向いてホイ」のゲー�
     - `The day and month we are playing on`: ゲームがプレイされている曜日と月（例：Monday、Januaryなど）
 
 
-## ダウンロード
+## リポジトリの取得
 
 リポジトリをクローン
 ```bash
@@ -30,7 +30,7 @@ git clone https://github.com/okayusuke0517/mypkg.git
 
 1. **ノードの起動**
    ```bash
-   $ros2 run mypkg HoiStatusPublisher
+   $ros2 run mypkg hoistatuspublisher
    ```
 
 2. **トピックの確認**
@@ -64,7 +64,7 @@ git clone https://github.com/okayusuke0517/mypkg.git
 ## ライセンス
 
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
-* このパッケージのHoiStatusPublisher.py,test.bash以外のコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
+* このパッケージのhoistatuspublisher.py, test.bash以外のコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
     - https://github.com/ryuichiueda/slides_marp/tree/master/robosys2024
 
 © 2024 Yusuke Oka
