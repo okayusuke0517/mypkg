@@ -1,27 +1,27 @@
 # hoistatuspublisher
 ![test](https://github.com/okayusuke0517/mypkg/actions/workflows/test.yml/badge.svg)
 
-hoistatuspublisherは、ROS2ノードで「あっち向いてホイ」のゲームステータスを１秒ごとにパブリッシュする。
+hoistatuspublisherは、ROS2ノードで「あっち向いてホイ」のゲームステータスを1秒ごとにパブリッシュする。
 
 ## ノード
 
 - **hoistatuspublisher**
   - ゲームのステータスをトピックにパブリッシュするノード
 
-## トピック一覧
+## トピック
 
 - **`/game_status`**（メッセージをパブリッシュするトピック）
   - **型**: `std_msgs/String`
   - **説明**: ゲームのラウンド数、方向情報（上、下、左、右）、プレイ中の曜日と月を含むメッセージをパブリッシュする。
   - **メッセージの意味**:
     - `Round`: ゲームのラウンド番号（整数）
-    - `Directin`: プレイヤーが選んだ方向（上、下、左、右）
-    - `The day and month we are playing on`: ゲームがプレイされている曜日と月（例：Monday、Januaryなど）
+    - `Direction`: プレイヤーが選んだ方向（上、下、左、右）
+    - `The day and month we are playing on`: ゲームがプレイされている曜日と月（例: Monday、Januaryなど）
 
 
-## リポジトリの取得
+## 準備
 
-リポジトリをクローン
+ソースコードを取得するには、以下のコマンドを実行してリポジトリをクローンしてください。
 ```bash
 git clone https://github.com/okayusuke0517/mypkg.git
 ```
@@ -30,7 +30,7 @@ git clone https://github.com/okayusuke0517/mypkg.git
 
 1. **ノードの起動**
    ```bash
-   $ros2 run mypkg hoistatuspublisher
+   $ ros2 run mypkg hoistatuspublisher
    ```
 
 2. **トピックの確認**
@@ -38,7 +38,7 @@ git clone https://github.com/okayusuke0517/mypkg.git
    
    メッセージ例
    ```bash
-   $ros2 topic echo /game_status
+   $ ros2 topic echo /game_status
 
    data: 'Round: 29, Direction: 下, The day and month we are playing on: Wednesday, January'
    ---
@@ -53,13 +53,13 @@ git clone https://github.com/okayusuke0517/mypkg.git
 ## 必要なソフトウェア
 
 - Python3
-  - テスト済みバージョン：3.8.10
+  - テスト済みバージョン: 3.8.10
  
 ## テスト環境
 
 - ROS2
-  - Distribution:Humble Hawksbill
-  - OS:Ubuntu 22.04 LTS
+  - Distribution: Humble Hawksbill
+  - OS: Ubuntu 22.04 LTS
 
 ## ライセンス
 

@@ -33,7 +33,6 @@ class hoistatuspublisher(Node):
             status_msg.data = message
 
             self.pub_game_status.publish(status_msg)
-            self.get_logger().info(f"Published: {message}")
 
             self.n += 1
 
