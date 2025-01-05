@@ -18,12 +18,6 @@ hoistatuspublisherは、ROS2ノードで「あっち向いてホイ」のゲー�
     - `Direction`: プレイヤーが選んだ方向（上、下、左、右）
     - `The day and month we are playing on`: ゲームがプレイされている曜日と月（例: Monday、Januaryなど）
 
-
-## 準備
-
-```bash
-git clone https://github.com/okayusuke0517/mypkg.git
-```
  
 ## 使用方法
 
