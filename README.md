@@ -21,7 +21,6 @@ hoistatuspublisherは、ROS2ノードで「あっち向いてホイ」のゲー�
 
 ## 準備
 
-ソースコードを取得するには、以下のコマンドを実行してリポジトリをクローンしてください。
 ```bash
 git clone https://github.com/okayusuke0517/mypkg.git
 ```
